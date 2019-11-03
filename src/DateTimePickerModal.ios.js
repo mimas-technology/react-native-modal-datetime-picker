@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StyleSheet, Text, TouchableHighlight, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import Modal from "./Modal";
 import { isIphoneX } from "./utils";
@@ -250,14 +250,14 @@ const headerStyles = StyleSheet.create({
 
 export const ConfirmButton = ({ isDisabled, onPress, label }) => {
   return (
-    <TouchableHighlight
+    <TouchableOpacity
       style={confirmButtonStyles.button}
-      underlayColor={HIGHLIGHT_COLOR}
+      // underlayColor={HIGHLIGHT_COLOR}
       onPress={onPress}
       disabled={isDisabled}
     >
       <Text style={confirmButtonStyles.text}>{label}</Text>
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 };
 
@@ -283,13 +283,13 @@ export const CancelButton = ({ isDarkModeEnabled, onPress, label }) => {
     ? cancelButtonStyles.buttonDark
     : cancelButtonStyles.buttonLight;
   return (
-    <TouchableHighlight
+    <TouchableOpacity
       style={[cancelButtonStyles.button, themedButtonStyle]}
-      underlayColor={HIGHLIGHT_COLOR}
+      // underlayColor={HIGHLIGHT_COLOR}
       onPress={onPress}
     >
       <Text style={cancelButtonStyles.text}>{label}</Text>
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 };
 

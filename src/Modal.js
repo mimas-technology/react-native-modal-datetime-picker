@@ -161,7 +161,8 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
+    padding: 10,
   }
 });
 
